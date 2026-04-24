@@ -278,7 +278,7 @@
     }
 
     .hero-float-card {
-      position: absolute; bottom: -16px; left: -16px;
+      position: absolute; bottom: 30px; right: 70px;
       background: white; border-radius: var(--radius);
       padding: 12px 16px;
       box-shadow: 0 12px 40px rgba(0,0,0,0.25);
@@ -949,6 +949,96 @@
     @media (min-width: 640px) {
       .flow-arrow { transform: rotate(-90deg); }
     }
+
+    /* ── HERO SUPPORT LINE ──────────────────────── */
+    .hero-support {
+      font-size: clamp(14px, 3vw, 16px);
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.4px;
+      margin-top: -10px;
+      margin-bottom: var(--space-md);
+      animation: fadeUp 0.6s ease 0.45s both;
+    }
+
+    /* ── PROJECT CTA SECTION ────────────────────── */
+    .project-cta {
+      background: var(--blue-light);
+      padding: 36px var(--section-px);
+      border-bottom: 1px solid #d0e4ff;
+    }
+    .project-cta-inner {
+      max-width: 760px; margin: 0 auto;
+      display: flex; flex-direction: column;
+      align-items: flex-start; gap: 16px;
+    }
+    @media (min-width: 640px) {
+      .project-cta-inner {
+        flex-direction: row; align-items: center;
+        justify-content: space-between; gap: 32px;
+      }
+    }
+    .project-cta-text h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(18px, 4vw, 22px);
+      font-weight: 700; color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .project-cta-text p {
+      font-size: clamp(14px, 3vw, 15px);
+      color: var(--text-light); line-height: 1.6;
+    }
+    .btn-project {
+      background: var(--blue); color: white;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700; font-size: 14px;
+      padding: 13px 24px; border-radius: var(--radius);
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s, transform 0.15s;
+      flex-shrink: 0;
+      display: inline-block;
+    }
+    .btn-project:hover { background: var(--blue-dark); transform: translateY(-1px); }
+
+    /* ── EXPANSION / CREDIBILITY SECTION ────────── */
+    .expansion {
+      background: white;
+      border-top: 1px solid #e6edf5;
+    }
+    .expansion-inner {
+      max-width: 1100px; margin: 0 auto;
+      text-align: center;
+    }
+    .expansion-photos {
+      display: flex; gap: 16px;
+      justify-content: center; flex-wrap: wrap;
+      margin-top: 36px;
+    }
+    .expansion-photo {
+      flex: 1; min-width: 140px; max-width: 220px;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: linear-gradient(135deg, #cce0ff, #e8f2ff);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 10px;
+      border: 1px solid #d0e4ff;
+    }
+    .expansion-photo i { font-size: 28px; color: #6aabf7; }
+    .expansion-photo span {
+      font-size: 12px; color: #7aaacf;
+      text-align: center; padding: 0 12px;
+      line-height: 1.5; font-style: italic;
+    }
+    .expansion-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #e8f2ff; border: 1px solid #cce0ff;
+      color: var(--blue-dark);
+      font-size: 12px; font-weight: 600;
+      padding: 5px 14px; border-radius: 100px;
+      margin-bottom: 16px;
+      text-transform: uppercase; letter-spacing: 1px;
+    }
   </style>
 </head>
 <body>
@@ -961,7 +1051,7 @@
     </div>
     <span class="logo-text">Esso<span>-IDP</span></span>
   </div>
-  <a href="#inscription" class="nav-cta">Rejoindre →</a>
+  <a href="https://wa.me/237655271649?text=Bonjour%2C%20je%20souhaite%20rejoindre%20le%20r%C3%A9seau%20en%20tant%20qu%E2%80%99administrateur.%20Pouvez-vous%20m%E2%80%99expliquer%20les%20prochaines%20%C3%A9tapes%20%3F" class="nav-cta" target="_blank" rel="noopener">Rejoindre →</a>
 </nav>
 
 <!-- HERO -->
@@ -971,13 +1061,14 @@
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-badge">🟡 Recrutement en cours — 100 postes disponibles</div>
-      <h1>Gagnez de <span class="accent">l’argent avec vos idées -</span> depuis votre téléphone</h1>
+      <h1>Rejoignez le réseau des <span class="accent">administrateurs idéateurs</span></h1>
+      <p class="hero-support">Participez au développement de projets concrets</p>
       <p class="hero-sub">
         Devenez Administrateur Idéateur et développez le réseau Esso-IDP dans votre région. <br> <span style="
           color: #f5a623;">(Responsable local chargé de recruter et encadrer des idéateurs)</span>
       </p>
       <div class="hero-actions">
-        <a href="#inscription" class="btn-primary">Je veux postuler</a>
+        <a href="https://wa.me/237655271649?text=Bonjour%2C%20je%20souhaite%20rejoindre%20le%20r%C3%A9seau%20en%20tant%20qu%E2%80%99administrateur.%20Pouvez-vous%20m%E2%80%99expliquer%20les%20prochaines%20%C3%A9tapes%20%3F" class="btn-primary" target="_blank" rel="noopener">Je veux postuler</a>
         <a href="#comment-ca-marche" class="btn-ghost">Comment ça marche</a>
       </div>
       <div class="hero-stats">
@@ -998,13 +1089,8 @@
 
     <div class="hero-visual">
       <div class="hero-img-container">
-        <!--
-          IMAGE REQUISE — Photo principale du héros
-          Contenu : jeune professionnel camérounais, souriant,
-          tenant un téléphone ou travaillant sur un ordinateur.
-          Dimensions recommandées : 800×600px minimum.
-          Remplacer par : <img src="..." alt="Administrateur Esso-IDP au travail">
-        -->
+    <img src="images/esso-work-pc.png" alt="Administrateur Esso-IDP au travail">
+    
         <div class="hero-img-placeholder">
           <div class="placeholder-icon"><i class="fa-regular fa-image"></i></div>
           <p class="placeholder-label">Photo : jeune administrateur au travail — téléphone ou laptop</p>
@@ -1020,6 +1106,17 @@
     </div>
   </div>
 </section>
+
+<!-- PROJECT CTA -->
+<div class="project-cta">
+  <div class="project-cta-inner">
+    <div class="project-cta-text">
+      <h2>Vous avez un projet&nbsp;?</h2>
+      <p>Soumettez votre idée et bénéficiez d'un accompagnement et de visibilité.</p>
+    </div>
+    <a href="https://wa.me/237655271649?text=Bonjour%2C%20je%20suis%20porteur%20de%20projet%20et%20je%20souhaite%20soumettre%20mon%20id%C3%A9e%20sur%20la%20plateforme.%20Quelles%20sont%20les%20prochaines%20%C3%A9tapes%20%3F" class="btn-project" target="_blank" rel="noopener">Soumettre mon projet</a>
+  </div>
+</div>
 
 <!-- ABOUT -->
 <section class="about" id="a-propos">
@@ -1164,6 +1261,7 @@
     <div class="offer-grid">
       <div class="offer-visual">
         <div class="offer-img-wrap">
+          <img src="images/work-on-phone.png" alt="Administrateur Esso-IDP gagnant ses revenus">
           <!--
             IMAGE REQUISE — Photo "Gains et opportunité"
             Contenu : personne affichant satisfaction ou réussite,
@@ -1356,6 +1454,32 @@
   </div>
 </section>
 
+<!-- EXPANSION / CREDIBILITY -->
+<section class="expansion">
+  <div class="section-inner expansion-inner">
+    <span class="expansion-badge"><i class="fa-solid fa-chart-line"></i> En expansion</span>
+    <h2 class="section-title" style="margin:0 auto 14px;">Une plateforme en expansion</h2>
+    <p class="section-sub" style="max-width:620px; margin:0 auto;">
+      Suite à une convention récemment signée, la plateforme élargit son accès aux porteurs
+      de projets et renforce son réseau.
+    </p>
+    <div class="expansion-photos">
+      <div class="expansion-photo">
+        <img src="images/signing.jpg" alt="Signature de la convention Esso-IDP">
+       
+  
+      </div>
+      <div class="expansion-photo">
+       <img src="images/reunion.jpg" alt="Équipe Esso-IDP en réunion">
+     
+      </div>
+      <div class="expansion-photo">
+          <img src="/images/showing.jpg" alt="Porteur de projet accompagné">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section" id="inscription">
   <div class="cta-inner">
@@ -1366,11 +1490,27 @@
       avec les détails du programme.
     </p>
     <div class="cta-form">
-      <input type="text" placeholder="Votre prénom et nom" autocomplete="name" />
-      <input type="tel" placeholder="Votre numéro WhatsApp" autocomplete="tel" />
-      <button type="button">Je postule →</button>
+      <input id="cta-name" type="text" placeholder="Votre prénom et nom" autocomplete="name" />
+      <input id="cta-phone" type="tel" placeholder="Votre numéro WhatsApp" autocomplete="tel" />
+      <button type="button" onclick="sendToWhatsApp()">Je postule →</button>
     </div>
-    <p class="cta-note">Ou contactez-nous directement sur WhatsApp au +237 6 57 99 70 81</p>
+
+    <script>
+    function sendToWhatsApp() {
+      var name  = document.getElementById('cta-name').value.trim();
+      var phone = document.getElementById('cta-phone').value.trim();
+
+      if (!name || !phone) {
+        alert('Veuillez remplir les champs avant de continuer.');
+        return;
+      }
+
+      var message = 'Bonjour, je souhaite postuler en tant qu\u2019administrateur.\n\nNom\u00a0: ' + name + '\nNum\u00e9ro\u00a0: ' + phone;
+      var url = 'https://wa.me/237655271649?text=' + encodeURIComponent(message);
+      window.open(url, '_blank');
+    }
+    </script>
+    <p class="cta-note">Ou contactez-nous directement sur <a href="https://wa.me/237655271649?text=Bonjour%2C%20je%20souhaite%20rejoindre%20le%20r%C3%A9seau%20en%20tant%20qu%E2%80%99administrateur.%20Pouvez-vous%20m%E2%80%99expliquer%20les%20prochaines%20%C3%A9tapes%20%3F" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.75);">WhatsApp au +237 6 55 27 16 49 </a></p>
   </div>
 </section>
 
@@ -1390,7 +1530,7 @@
       </div>
       <div class="contact-item">
         <span><i class="fa-solid fa-phone"></i></span>
-        <a href="tel:+237657997081">+237 6 57 99 70 81</a>
+        <a href="tel:+237655271649">+237 6 55 27 16 49</a>
       </div>
       <div class="contact-item">
         <span><i class="fa-solid fa-envelope"></i></span>
@@ -1405,8 +1545,8 @@
   <div class="footer-inner">
     <p>© 2025 CIERSA-ASA / Esso-IDP. Tous droits réservés.</p>
     <p>
-      <a href="#">Conditions d'utilisation</a> &nbsp;·&nbsp;
-      <a href="#">Politique de confidentialité</a>
+      <a href="/conditions.html" rel="noopener" target="_blank">Conditions d'utilisation</a> &nbsp;·&nbsp;
+      <a href="/politique.html" rel="noopener" target="_blank">Politique de confidentialité</a>
     </p>
   </div>
 </footer>
